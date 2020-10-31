@@ -1,0 +1,41 @@
+body{
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #10164d;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: #10164d;
+  -webkit-text-stroke: 1px #fff;
+  text-shadow: 0 0 5px #ffa;
+  font-size: 50px;
+}
+
+span::before {
+  content: '';
+  -webkit-text-stroke: 0;
+  text-shadow: none;
+  animation: switch 3s linear infinite;
+}
+
+@keyframes switch{
+  0%{
+    content: '🎮';
+    animation-delay: 1s;
+  }
+  
+  50%{
+    content: '💻';
+    animation-delay: 1s;
+  }
+  
+  100%{
+    content: '🍫';
+    animation-delay: 1s;
+  }
+}
