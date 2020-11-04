@@ -1,0 +1,28 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: #393b41;
+}
+
+h1{
+  text-align: center;
+  margin-top: 150px;
+  font-family: 'Arial Black';
+  font-size: 10em;
+  line-height: 1em;
+  background: url(./imagemFundo.jpg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: moveBack 10s linear infinite;
+}
+
+@keyframes moveBack{
+  0%{
+    background-position: 0 0;
+  }
+  
+  100%{
+    background-position: 100% 100%;
+  }
+
+}
