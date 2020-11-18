@@ -1,0 +1,90 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #111;
+  padding-top: 150px;
+}
+
+.lightsaber{
+  position: relative;
+  margin-right: 30px;
+}
+
+.lightsaber input[type="checkbox"]{
+  opacity: 0;
+}
+
+.lightsaber label{
+  cursor: pointer;
+  display: block;
+  height: 50px;
+  width: 15px;
+  background: #ddd;
+  border-bottom: solid 4px #888;
+  border-top: solid 4px #888;
+  border-radius: 5px;
+  background: linear-gradient(to right,
+              rgba(226,226,226,1) 0%,
+              rgba(219,219,219,1) 50%,
+              rgba(209,209,209,1) 51%,
+              rgba(254,254,254,1) 100%);
+}
+
+.lightsaber .blade{
+  position: absolute;
+  bottom: 63px;
+  left: 2.5px;
+  z-index: -1;
+  border-radius: 12px 12px 0 0;
+  background: #fff;
+  height: 0;
+  width: 10px;
+  filter: blur(1px);
+  box-shadow: 0 0 10px #fff;
+  transition: .3s height;
+}
+
+.lightsaber--yoda .blade {
+  background: rgb(135, 220, 90);
+  background: linear-gradient(
+  to right, 
+  rgb(135, 220, 90) 0%, 
+  rgb(254, 254, 254) 30%, 
+  rgb(254, 254, 254) 50%, 
+  rgb(254, 254, 254) 70%, 
+  rgb(135, 220, 90) 100%
+);
+}
+
+.lightsaber--vader .blade {
+  background: rgb(229, 17, 21);
+  background: linear-gradient(
+  to right, 
+  rgba(229, 17, 21, 1) 0%, 
+  rgba(254, 254, 254, 1) 30%, 
+  rgba(254, 254, 254, 1) 47%, 
+  rgba(254, 254, 254, 1) 71%, 
+  rgba(229, 17, 21, 1) 100%
+);
+}
+
+.lightsaber--windu .blade {
+  background: rgb(202, 116, 221);
+  background: linear-gradient(
+  to right, 
+  rgba(202,116,221,1) 0%,
+  rgba(254,254,254,1) 30%,
+  rgba(254,254,254,1) 47%,
+  rgba(254,254,254,1) 71%,
+  rgba(202,116,221,1) 100%
+);
+}
+.lightsaber input[type="checkbox"]:checked ~ .blade{
+  height: 250px;
+}
